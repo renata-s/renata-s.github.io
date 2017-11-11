@@ -1,0 +1,56 @@
+ body {
+	position: absolute;
+	box-sizing: border-box;
+	border: 1px solid #D5CECE;
+	width: 340px;
+	height: 740px;
+	background: #fff;
+	box-shadow: 8px 8px 1px 1px #e6e6e6;
+}
+
+#box {
+	border: 1px solid #D5CECE;
+	width: 280px;
+	margin-left: 20px;
+	padding: 5px 10px;
+	font-size: 16px;
+}
+
+.name {
+	margin: 5px;
+	margin-left: 10px;
+	padding: 15px;
+	font: bold 30px Georgia, serif;
+	text-align: left;
+}
+
+.fact {
+	font-style: italic;
+	text-align: justify;
+}
+
+ .specification {
+	padding: 0px;
+}
+
+
+.list {
+	list-style: none;
+}
+
+.items {
+	font-weight: bold;
+
+}
+
+.description {
+	text-align: left;
+}
+
+.picture {
+	width: 300px;
+	border-radius: 10px;
+	margin-left: 20px;
+	margin-bottom: 15px;
+	padding: 0px;
+}
