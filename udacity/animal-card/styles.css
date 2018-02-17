@@ -4,8 +4,12 @@
 	border: 1px solid #D5CECE;
 	width: 340px;
 	height: 740px;
+  	margin: auto 0;
 	background: #fff;
 	box-shadow: 8px 8px 1px 1px #e6e6e6;
+  	margin: 20px auto;
+  	left: 0px;
+  	right: 0px;
 }
 
 #box {
