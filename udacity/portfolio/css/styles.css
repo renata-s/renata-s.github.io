@@ -1,0 +1,129 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 12px;
+  color: #424242;
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+header, section, div {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+header, .projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  align-items: center;
+}
+
+hr {
+  background-color: #7d97ad;
+  height: 5px;
+}
+
+.header__logo {
+  width: auto;
+  height: auto;
+  margin-right: 0.25em;
+  margin-top: 12px;
+  font-weight: 100%;
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.header__title {
+  width: 89%;
+  font-size: 1.25em;
+  margin: 0;
+  text-align: right;
+  text-transform: uppercase;
+  color: #2d3c49;
+  letter-spacing: 0.1em;
+}
+
+h4 {
+  font-size: 0.85em;
+}
+
+main, .section {
+  display: block;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.project-item {
+  padding: 5px;
+}
+
+.project-item h3 {
+  color: #2d3c49;
+  text-transform: uppercase;
+  font-size: 2em;
+}
+
+.title {
+  color: #7d97ad;
+  font-size: 2.3em;
+  letter-spacing: 0.1em;
+  margin-top: 0.5em;
+  margin-bottom: 0.3em;
+}
+
+@media screen and (max-width: 610px) {
+  .header__logo {
+    height: 48px;
+    display: block;
+    margin: 0 auto;
+  }
+  .header__title, .project-item h3 {
+    font-size: 0.75em;
+  }
+}
+
+@media screen and (min-width: 450px) {
+  @media screen and (min-width: 550px) {}
+  @media screen and (min-width: 900px) {
+    body {
+      width: 900px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .project-item {
+      width: 33%;
+      height: 100%;
+      text-align: center;
+    }
+    .header_logo {
+      width: 25%;
+    }
+    .header_title {
+      width: 75%;
+    }
+    hr, .projects {
+      width: 100%;
+    }
+  }
+}
