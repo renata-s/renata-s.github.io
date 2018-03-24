@@ -15,7 +15,7 @@ class MatchingGame {
         this.stars = containerEl.querySelector('.stars');
         containerEl.querySelector('.restart').addEventListener('click', this.restart.bind(this));
         let game = this;
-        this.cards.forEach(function(card){
+        this.cards.forEach(function (card) {
             card.addEventListener('click', game.showCard.bind(game))
             card.addEventListener('click', game.checkCards.bind(game))
         })
@@ -28,7 +28,7 @@ class MatchingGame {
         this.deck.innerHTML = '';
         for (let i = 0; i < this.cards.length; i++) {
             let card = this.cards[i];
-            card.classList.remove('show', 'open', 'match');
+            card.classList.remove('show', 'open', 'match', 'disabled');
             this.deck.appendChild(card);
         }
         this.openedCards = [];
@@ -37,18 +37,19 @@ class MatchingGame {
 
     }
 
-    showCard(el){
+    showCard(el) {
         el.currentTarget.classList.toggle("open");
         el.currentTarget.classList.toggle("show");
+        el.currentTarget.classList.toggle("disabled");
     }
 
-    checkCards(el){
+    checkCards(el) {
         let card = el.currentTarget;
         this.openedCards.push(card);
-        
+
         if (this.openedCards.length === 2) {
             this.incrementMoves();
-            if (this.openedCards[0].type === this.openedCards[1].type) {
+            if (this.openedCards[0].querySelector('i').classList[1] == this.openedCards[1].querySelector('i').classList[1]) {
                 this.matches();
             } else {
                 this.unmatches();
@@ -71,20 +72,48 @@ class MatchingGame {
         return array;
     }
 
-    incrementMoves(){
+    incrementMoves() {
         this.moves = this.moves + 1;
         this.movesElement.innerHTML = this.moves;
     }
 
-    matches(){
-        // todo
-    }
-    unmatches(){
-        // todo
+    matches() {
+        this.openedCards[0].classList.add("match", "disabled");
+        this.openedCards[0].classList.remove("show", "open", "no-event");
+        this.openedCards[1].classList.add("match", "disabled");
+        this.openedCards[1].classList.remove("show", "open", "no-event");
+        this.openedCards = [];
     }
 
+    unmatches() {
+        this.openedCards[0].classList.add("unmatched");
+        this.openedCards[1].classList.add("unmatched");
+        this.disable();
+        let game = this;
+        setTimeout(function () {
+            game.openedCards[0].classList.remove("show", "open", "no-event", "unmatched");
+            game.openedCards[1].classList.remove("show", "open", "no-event", "unmatched");
+            game.enable();
+            game.openedCards = [];
+        }, 1000);
+    }
+
+    disable() {
+        this.cards.forEach(function (card) {
+            card.classList.add('disabled');
+        });
+    }
+
+    enable() {
+        let game = this;
+        this.cards.forEach(function (card) {
+            card.classList.remove('disabled');
+            for (let i = 0; i < game.matchedCard.length; i++) {
+                game.matchedCard[i].classList.add("disabled");
+            }
+        });
+    }
 }
-
 document.body.onload = function () {
     let game = new MatchingGame(document.getElementById('matching-game'));
 }
