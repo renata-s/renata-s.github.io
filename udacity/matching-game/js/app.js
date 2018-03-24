@@ -10,12 +10,14 @@ class MatchingGame {
 
         this.deck = containerEl.getElementsByClassName('deck')[0];
         this.matchedCard = containerEl.getElementsByClassName('match');
-        this.moves = containerEl.querySelector('.moves');
+        this.movesElement = containerEl.querySelector('.moves');
+        this.moves = 0;
         this.stars = containerEl.querySelector('.stars');
         containerEl.querySelector('.restart').addEventListener('click', this.restart.bind(this));
         let game = this;
         this.cards.forEach(function(card){
             card.addEventListener('click', game.showCard.bind(game))
+            card.addEventListener('click', game.checkCards.bind(game))
         })
 
         this.restart();
@@ -29,11 +31,29 @@ class MatchingGame {
             card.classList.remove('show', 'open', 'match');
             this.deck.appendChild(card);
         }
+        this.openedCards = [];
+        this.movesElement.innerHTML = 0;
+        this.moves = 0;
+
     }
 
     showCard(el){
         el.currentTarget.classList.toggle("open");
         el.currentTarget.classList.toggle("show");
+    }
+
+    checkCards(el){
+        let card = el.currentTarget;
+        this.openedCards.push(card);
+        
+        if (this.openedCards.length === 2) {
+            this.incrementMoves();
+            if (this.openedCards[0].type === this.openedCards[1].type) {
+                this.matches();
+            } else {
+                this.unmatches();
+            }
+        }
     }
 
     // Shuffle function from http://stackoverflow.com/a/2450976
@@ -50,6 +70,19 @@ class MatchingGame {
 
         return array;
     }
+
+    incrementMoves(){
+        this.moves = this.moves + 1;
+        this.movesElement.innerHTML = this.moves;
+    }
+
+    matches(){
+        // todo
+    }
+    unmatches(){
+        // todo
+    }
+
 }
 
 document.body.onload = function () {
