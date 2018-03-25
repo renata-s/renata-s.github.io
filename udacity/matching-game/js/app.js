@@ -10,6 +10,9 @@ class MatchingGame {
 
         this.deck = containerEl.getElementsByClassName('deck')[0];
         this.matchedCard = containerEl.getElementsByClassName('match');
+        this.popup = containerEl.querySelector('.modal');
+        this.popupBtn = containerEl.querySelector('.modal-btn');
+        this.popupBtn.addEventListener("click", this.playAgain.bind(this))
         this.movesElement = containerEl.querySelector('.moves');
         this.moves = 0;
         this.stars = containerEl.querySelector('.stars');
@@ -18,6 +21,7 @@ class MatchingGame {
         this.cards.forEach(function (card) {
             card.addEventListener('click', game.showCard.bind(game))
             card.addEventListener('click', game.checkCards.bind(game))
+            card.addEventListener('click', game.checkForGameVictory.bind(game))
         })
 
         this.restart();
@@ -113,7 +117,24 @@ class MatchingGame {
             }
         });
     }
+
+    checkForGameVictory() {
+        if (this.matchedCard.length === this.cards.length) {
+            this.congratulationsPopup();
+        }
+    }
+
+    congratulationsPopup() {
+        this.popup.classList.toggle("show-modal");
+    }
+
+    playAgain() {
+        this.popup.classList.toggle("show-modal");
+        this.restart();
+    }
+
 }
+
 document.body.onload = function () {
     let game = new MatchingGame(document.getElementById('matching-game'));
 }
