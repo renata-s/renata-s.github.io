@@ -7,7 +7,8 @@ class MatchingGame {
         this.container = containerEl;
         this.cards = [...containerEl.getElementsByClassName('card')];
         this.openedCards = [];
-
+        this.minute = 0;
+        this.second = 0;
         this.deck = containerEl.getElementsByClassName('deck')[0];
         this.matchedCard = containerEl.getElementsByClassName('match');
         this.popup = containerEl.querySelector('.modal');
@@ -15,7 +16,10 @@ class MatchingGame {
         this.popupBtn.addEventListener("click", this.playAgain.bind(this))
         this.movesElement = containerEl.querySelector('.moves');
         this.moves = 0;
+        this.timerStarted = false;
+        this.interval;
         this.stars = containerEl.querySelector('.stars');
+        this.timer = containerEl.querySelector(".timer");
         containerEl.querySelector('.restart').addEventListener('click', this.restart.bind(this));
         let game = this;
         this.cards.forEach(function (card) {
@@ -38,7 +42,11 @@ class MatchingGame {
         this.openedCards = [];
         this.movesElement.innerHTML = 0;
         this.moves = 0;
-
+        this.timerStarted = false;
+        this.timer.innerHTML = "0 mins 0 secs";
+        clearInterval(this.interval);
+        this.minute = 0;
+        this.second = 0;
     }
 
     showCard(el) {
@@ -48,6 +56,10 @@ class MatchingGame {
     }
 
     checkCards(el) {
+        if (!this.timerStarted) {
+            this.timerStarted = true;
+            this.startTimer();
+        }
         let card = el.currentTarget;
         this.openedCards.push(card);
 
@@ -79,6 +91,19 @@ class MatchingGame {
     incrementMoves() {
         this.moves = this.moves + 1;
         this.movesElement.innerHTML = this.moves;
+        //TODO: lower stars
+    }
+
+    startTimer() {
+        let game = this;
+        this.interval = setInterval(function () {
+            game.timer.innerHTML = game.minute + "mins " + game.second + "secs";
+            game.second++;
+            if (game.second === 60) {
+                game.minute++;
+                game.second = 0;
+            }
+        }, 1000);
     }
 
     matches() {

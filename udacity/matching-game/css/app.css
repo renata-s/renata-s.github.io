@@ -112,6 +112,11 @@ h1 {
     cursor: pointer;
 }
 
+.timer {
+	display: inline-block;
+	margin: 0 2rem;
+}
+
 /* 
 * Styles for popup 
 */
