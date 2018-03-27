@@ -1,7 +1,3 @@
-/*
- * Create a list that holds all of your cards
- */
-
 class MatchingGame {
     constructor(containerEl) {
         this.container = containerEl;
@@ -13,13 +9,14 @@ class MatchingGame {
         this.matchedCard = containerEl.getElementsByClassName('match');
         this.popup = containerEl.querySelector('.modal');
         this.popupBtn = containerEl.querySelector('.modal-btn');
-        this.popupBtn.addEventListener("click", this.playAgain.bind(this))
+        this.popupBtn.addEventListener('click', this.playAgain.bind(this))
         this.movesElement = containerEl.querySelector('.moves');
         this.moves = 0;
         this.timerStarted = false;
         this.interval;
-        this.stars = containerEl.querySelector('.stars');
-        this.timer = containerEl.querySelector(".timer");
+        this.stars = containerEl.querySelectorAll('.stars li');
+        this.timer = containerEl.querySelector('.timer');
+        
         containerEl.querySelector('.restart').addEventListener('click', this.restart.bind(this));
         let game = this;
         this.cards.forEach(function (card) {
@@ -43,16 +40,20 @@ class MatchingGame {
         this.movesElement.innerHTML = 0;
         this.moves = 0;
         this.timerStarted = false;
-        this.timer.innerHTML = "0 mins 0 secs";
+        this.timer.innerHTML = '0 mins 0 secs';
         clearInterval(this.interval);
         this.minute = 0;
         this.second = 0;
+        for (let i = 0; i < this.stars.length; i++) {
+            this.stars[i].style.color = '#FFD700';
+            this.stars[i].style.visibility = 'visible';
+        }
     }
 
     showCard(el) {
-        el.currentTarget.classList.toggle("open");
-        el.currentTarget.classList.toggle("show");
-        el.currentTarget.classList.toggle("disabled");
+        el.currentTarget.classList.toggle('open');
+        el.currentTarget.classList.toggle('show');
+        el.currentTarget.classList.toggle('disabled');
     }
 
     checkCards(el) {
@@ -91,13 +92,21 @@ class MatchingGame {
     incrementMoves() {
         this.moves = this.moves + 1;
         this.movesElement.innerHTML = this.moves;
-        //TODO: lower stars
+
+        switch (this.moves) {
+            case 8:
+                this.stars[2].style.color = 'black';
+                break;
+            case 15:
+                this.stars[1].style.color = 'black';
+                break;
+        }
     }
 
     startTimer() {
         let game = this;
         this.interval = setInterval(function () {
-            game.timer.innerHTML = game.minute + "mins " + game.second + "secs";
+            game.timer.innerHTML = game.minute + ' mins ' + game.second + ' secs';
             game.second++;
             if (game.second === 60) {
                 game.minute++;
@@ -107,21 +116,21 @@ class MatchingGame {
     }
 
     matches() {
-        this.openedCards[0].classList.add("match", "disabled");
-        this.openedCards[0].classList.remove("show", "open", "no-event");
-        this.openedCards[1].classList.add("match", "disabled");
-        this.openedCards[1].classList.remove("show", "open", "no-event");
+        this.openedCards[0].classList.add('match', 'disabled');
+        this.openedCards[0].classList.remove('show', 'open', 'no-event');
+        this.openedCards[1].classList.add('match', 'disabled');
+        this.openedCards[1].classList.remove('show', 'open', 'no-event');
         this.openedCards = [];
     }
 
     unmatches() {
-        this.openedCards[0].classList.add("unmatched");
-        this.openedCards[1].classList.add("unmatched");
+        this.openedCards[0].classList.add('unmatched');
+        this.openedCards[1].classList.add('unmatched');
         this.disable();
         let game = this;
         setTimeout(function () {
-            game.openedCards[0].classList.remove("show", "open", "no-event", "unmatched");
-            game.openedCards[1].classList.remove("show", "open", "no-event", "unmatched");
+            game.openedCards[0].classList.remove('show', 'open', 'no-event', 'unmatched');
+            game.openedCards[1].classList.remove('show', 'open', 'no-event', 'unmatched');
             game.enable();
             game.openedCards = [];
         }, 1000);
@@ -138,23 +147,27 @@ class MatchingGame {
         this.cards.forEach(function (card) {
             card.classList.remove('disabled');
             for (let i = 0; i < game.matchedCard.length; i++) {
-                game.matchedCard[i].classList.add("disabled");
+                game.matchedCard[i].classList.add('disabled');
             }
         });
     }
 
     checkForGameVictory() {
         if (this.matchedCard.length === this.cards.length) {
+            clearInterval(this.interval);
             this.congratulationsPopup();
         }
     }
 
     congratulationsPopup() {
-        this.popup.classList.toggle("show-modal");
+        this.popup.classList.toggle('show-modal');
+        this.container.querySelector('#final-stars').innerHTML = this.container.querySelector('.stars').innerHTML;
+        this.container.querySelector('#totalTime').innerHTML = this.timer.innerHTML;
+        this.container.querySelector('#totalMoves').innerHTML = this.moves;
     }
 
     playAgain() {
-        this.popup.classList.toggle("show-modal");
+        this.popup.classList.toggle('show-modal');
         this.restart();
     }
 
@@ -163,14 +176,3 @@ class MatchingGame {
 document.body.onload = function () {
     let game = new MatchingGame(document.getElementById('matching-game'));
 }
-
-/*
- * set up the event listener for a card. If a card is clicked:
- *  - display the card's symbol (put this functionality in another function that you call from this one)
- *  - add the card to a *list* of "open" cards (put this functionality in another function that you call from this one)
- *  - if the list already has another card, check to see if the two cards match
- *    + if the cards do match, lock the cards in the open position (put this functionality in another function that you call from this one)
- *    + if the cards do not match, remove the cards from the list and hide the card's symbol (put this functionality in another function that you call from this one)
- *    + increment the move counter and display it on the page (put this functionality in another function that you call from this one)
- *    + if all cards have matched, display a message with the final score (put this functionality in another function that you call from this one)
- */
