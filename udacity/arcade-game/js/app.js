@@ -17,10 +17,12 @@ Enemy.prototype.update = function (dt) {
         this.speed = 100 + Math.floor(Math.random() * 200);
     }
 
-    if (player.x < this.x + enemy.width &&
-        player.x + player.width > this.x &&
-        player.y < this.y + enemy.height &&
-        player.y + player.height > this.y) {
+    const width = 80;
+    const heigth = 60;
+    if (player.x < this.x + width &&
+        player.x + width > this.x &&
+        player.y < this.y + heigth &&
+        player.y + heigth > this.y) {
         player.x = 200;
         player.y = 400;
     }
