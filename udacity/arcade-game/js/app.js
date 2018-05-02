@@ -1,3 +1,7 @@
+/**
+ * @description Enemy
+ * @constructor
+ */
 class Enemy {
     constructor(x, y, speed) {
         this.x = x;
@@ -7,40 +11,42 @@ class Enemy {
     }
 };
 
-// Update the enemy's position, required method for game
-// Parameter: dt, a time delta between ticks
+/**
+ * @description update the enemy's position
+ * @param {dt} - ensure the game runs at the same speed for all computers.
+ */
 Enemy.prototype.update = function (dt) {
     this.x += this.speed * dt;
 
     if (this.x > 505) {
         this.x = -50;
-        this.speed = 100 + Math.floor(Math.random() * 200);
+        // Randomly setting the Enemy speed
+        this.speed = 120 + Math.floor(Math.random() * 200);
     }
 
+    // Handles enemies collision with the Player
     const width = 80;
-    const heigth = 60;
+    const height = 60;
     if (player.x < this.x + width &&
         player.x + width > this.x &&
-        player.y < this.y + heigth &&
-        player.y + heigth > this.y) {
+        player.y < this.y + height &&
+        player.y + height > this.y) {
         player.x = 200;
         player.y = 400;
     }
 };
 
-
-
-
-// You should multiply any movement by the dt parameter
-// which will ensure the game runs at the same speed for
-// all computers.
-// Draw the enemy on the screen, required method for game
+/**
+ * @description draw the enemy on the screen
+ */
 Enemy.prototype.render = function () {
     ctx.drawImage(Resources.get(this.sprite), this.x, this.y);
 };
-// Now write your own player class
-// This class requires an update(), render() and
-// a handleInput() method.
+
+/**
+ * @description Player
+ * @constructor
+ */
 class Player {
     constructor(x, y) {
         this.x = x;
@@ -49,14 +55,23 @@ class Player {
     }
 };
 
+/**
+ * @description the update method for the Player
+ */
 Player.prototype.update = function (dt) {
 
 }
 
+/**
+ * @description the render method for the Player
+ */
 Player.prototype.render = function () {
     ctx.drawImage(Resources.get(this.player), this.x, this.y);
 }
 
+/**
+ * @description the handleInput method, receive user input, allowedKeys (the key which was pressed) and move the player according to that input
+ */
 Player.prototype.handleInput = function (keyPress) {
     switch (keyPress) {
         case 'left':
@@ -81,6 +96,7 @@ Player.prototype.handleInput = function (keyPress) {
             break;
     }
 
+    // The game is won and player moving back to the initial location
     if (this.y < 35) {
         this.y = 20;
         setTimeout(function () {
@@ -90,22 +106,24 @@ Player.prototype.handleInput = function (keyPress) {
     }
 }
 
-
-// Now instantiate your objects.
-// Place all enemy objects in an array called allEnemies
-// Place the player object in a variable called player
+/**
+ * @description all enemy objects placed in an array called allEnemies
+ */
 const allEnemies = [];
+// Setting the Enemy initial location
 const enemyPosition = [55, 140, 235];
 
 enemyPosition.forEach(function (positionY) {
-    enemy = new Enemy(0, positionY, 150);
+    enemy = new Enemy(0, positionY, 400);
     allEnemies.push(enemy);
 });
 
+/**
+ * @description the player object placed in a variable called player
+ */
 const player = new Player(200, 400);
 
-// This listens for key presses and sends the keys to your
-// Player.handleInput() method. You don't need to modify this.
+// This listens for key presses and sends the keys to Player.handleInput() method
 document.addEventListener('keyup', function (e) {
     const allowedKeys = {
         37: 'left',
