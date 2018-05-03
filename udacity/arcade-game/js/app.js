@@ -52,6 +52,9 @@ class Player {
         this.x = x;
         this.y = y;
         this.player = 'images/char-princess-girl.png';
+        this.scoresElement = document.querySelector('.scores');
+        this.scores = 0;
+        this.scoresElement.innerHTML = this.scores;
     }
 };
 
@@ -60,6 +63,19 @@ class Player {
  */
 Player.prototype.update = function (dt) {
 
+}
+
+/**
+ * @description player won game
+ */
+Player.prototype.won = function () {
+    player.x = 200;
+    player.y = 400;
+
+    // When the player wins, show message "You Won!" and player get score
+    alert("You Won!");
+    this.scores++;
+    this.scoresElement.innerHTML = this.scores;
 }
 
 /**
@@ -98,13 +114,9 @@ Player.prototype.handleInput = function (keyPress) {
 
     // The game is won and player moving back to the initial location
     if (this.y < 35) {
-        this.y = 20;
-        setTimeout(function () {
-            player.x = 200;
-            player.y = 400;
-        }, 550);
+        player.won();
     }
-}
+};
 
 /**
  * @description all enemy objects placed in an array called allEnemies
@@ -114,7 +126,7 @@ const allEnemies = [];
 const enemyPosition = [55, 140, 235];
 
 enemyPosition.forEach(function (positionY) {
-    enemy = new Enemy(0, positionY, 400);
+    enemy = new Enemy(0, positionY, 250);
     allEnemies.push(enemy);
 });
 
