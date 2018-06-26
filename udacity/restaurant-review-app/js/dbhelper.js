@@ -9,7 +9,7 @@ class DBHelper {
    */
   static get DATABASE_URL() {
     const port = 8000 // Change this to your server port
-    return `http://localhost:${port}/data/restaurants.json`;
+    return `https://renata-s.github.io/udacity/restaurant-review-app/data/restaurants.json`;
   }
 
   /**
