@@ -219,6 +219,11 @@ nav h1 a {
     display: flex;
     flex-grow: 1;
   }
+
+  #restaurants-list li a {
+    font-size: 12pt;
+  
+  }
  }
 
 /* ====================== Restaurant Listing ====================== */
@@ -291,6 +296,12 @@ nav h1 a {
   text-transform: uppercase;
 }
 
+@media (min-width:481px)  { 
+  #restaurants-list li a {
+    font-size: 12pt;
+  
+  }
+ }
 /* ====================== Restaurant Details ====================== */
 .inside header {
   width: 100%;
