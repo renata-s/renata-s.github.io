@@ -15,12 +15,12 @@
   <!-- Beginning header -->
   <header>
     <!-- Beginning nav -->
-    <nav>
-      <h1><a href="/" tabindex="0" aria-label="Link Restaurant Reviews">Restaurant Reviews</a></h1>
+    <nav role="navigation">
+      <h1><a href="/" tabindex="-1">Restaurant Reviews</a></h1>
     </nav>
     <!-- Beginning breadcrumb -->
-    <ul id="breadcrumb" >
-      <li><a href="/" aria-label="Link Home">Home</a></li>
+    <ul id="breadcrumb" aria-label="Breadcrumb">
+      <li><a href="/">Home</a></li>
     </ul>
     <!-- End breadcrumb -->
     <!-- End nav -->
@@ -28,25 +28,25 @@
   <!-- End header -->
 
   <!-- Beginning main -->
-  <main id="maincontent">
+  <main id="maincontent" role="main">
     <!-- Beginning map -->
     <section id="maincontent-top">
-        <aside id="map-container">
-         <div id="map"></div>
+        <aside id="map-container" aria-label="map">
+         <div id="map" role="application"></div>
         </aside>
     </section>
     <!-- End map -->
     <!-- Beginning restaurant -->
     <section id="restaurant-container" aria-label="restaurant details" tabindex="0">
       <h1 id="restaurant-name"></h1>
-      <img id="restaurant-img">
+      <img id="restaurant-img" alt="restaurant foto">
       <p id="restaurant-cuisine"></p>
       <p id="restaurant-address"></p>
       <table id="restaurant-hours"></table>
     </section>
     <!-- end restaurant -->
     <!-- Beginning reviews -->
-    <section id="reviews-container">
+    <section id="reviews-container" role="article">
       <ul id="reviews-list"></ul>
     </section>
     <!-- End reviews -->
