@@ -9,7 +9,7 @@ export default class Map extends React.PureComponent {
       { title: 'Kaunas Castle', address: 'Pilies gatvė, Kaunas', highlight: false, location: { lat: 54.8989236, lng: 23.8854064 } },
       { title: 'Žalgirio Arena', address: 'Karaliaus Mindaugo prospektas, Kaunas', highlight: false, location: { lat: 54.8904589, lng: 23.9145647 } },
       { title: 'Oak-wood Park', address: 'Radvilėnų plentas, Kaunas', highlight: false, location: { lat: 54.8995381, lng: 23.9457049 } },
-      { title: 'KTU E-learning Technology Center', address: 'Studentų gatvė, Kaunas', highlight: false, location: { lat: 54.9049311, lng: 23.9566562 } },
+      { title: 'KTU Technology Center', address: 'Studentų gatvė, Kaunas', highlight: false, location: { lat: 54.9049311, lng: 23.9566562 } },
       { title: 'Flugplatz Aleksotas', address: 'Veiverių g., Kaunas', highlight: false, location: { lat: 54.8775545, lng: 23.8821133 } }
     ],
     search: '',
@@ -82,10 +82,10 @@ export default class Map extends React.PureComponent {
           <GoogleMapsWrapper
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDfEhgi4c_HGJNjrKa4EMisx-l71acyiWY"
             loadingElement={<div style={{ height: `100%` }} />}
-            containerElement={<div style={{ height: `800px` }} />}
-            mapElement={<div style={{ height: `100%` }} />}
+            containerElement={<div style={{ height: `100%` }} />}
+            mapElement={<div style={{ height: `100vh` }} />}
             defaultZoom={13}
-            defaultCenter={{ lat: 54.8989236, lng: 23.8854064 }}>
+            defaultCenter={{ lat: 54.8904589, lng: 23.9145647 }}>
             <MarkerClusterer
               averageCenter
               enableRetinaIcons
