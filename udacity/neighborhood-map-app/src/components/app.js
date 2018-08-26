@@ -8,7 +8,7 @@ class App extends Component {
 
       <div>
         <header className="App-header">
-          <h1 className="App-title">Neighborhood Map project</h1>
+          <h1 className="App-title" tabindex="1">Neighborhood Map project</h1>
         </header>
         <Map />
       </div>

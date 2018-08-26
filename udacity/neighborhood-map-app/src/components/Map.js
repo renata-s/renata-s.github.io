@@ -65,11 +65,12 @@ export default class Map extends React.PureComponent {
     const that = this;
     return (
       <div className="container">
-        <div className="sidebar">
+        <div className="sidebar" role="sidebar">
           <div className="text-input">
-            <input role="search" type='text' onChange={this.handleValueChange} />
+            <input role="search" aria-label="Search For a Location"
+              tabIndex="0" /> type='text' onChange={this.handleValueChange} />
             {
-              <ul className="locations-list">{
+              <ul className="locations-list" aria-label="Location list" tabIndex="0">{
                 this.state.markers.map(function (m, i) {
                   return (<li key={i}><a href='javascript:void(0)' onClick={that.handleClick.bind(that, m)}>{m.title}</a></li>)
                 })
@@ -78,7 +79,7 @@ export default class Map extends React.PureComponent {
             }
           </div>
         </div>
-        <div className="map">
+        <div className="map" role="map" aria-label="Neighborhood map">
           <GoogleMapsWrapper
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDfEhgi4c_HGJNjrKa4EMisx-l71acyiWY"
             loadingElement={<div style={{ height: `100%` }} />}
