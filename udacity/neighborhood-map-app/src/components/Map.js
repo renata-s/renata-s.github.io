@@ -63,7 +63,7 @@ export default class Map extends React.PureComponent {
       <div className="container">
         <div className="sidebar" role="sidebar">
           <div className="text-input">
-            <input role="search" tabIndex="0" type='text' onChange={this.handleValueChange} />
+            <input role="search" aria-label="Search" tabIndex="0" type='text' onChange={this.handleValueChange} />
             {
               <ul className="locations-list" aria-label="Location list" tabIndex="0">{
                 markers.map(function (m, i) {
@@ -74,7 +74,7 @@ export default class Map extends React.PureComponent {
             }
           </div>
         </div>
-        <div className="map" /*role="map"*/ /*aria-label="Neighborhood map"*/>
+        <div className="map" role="map" aria-label="Neighborhood map">
           <GoogleMapsWrapper
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDfEhgi4c_HGJNjrKa4EMisx-l71acyiWY"
             loadingElement={<div style={{ height: `100%` }} />}
