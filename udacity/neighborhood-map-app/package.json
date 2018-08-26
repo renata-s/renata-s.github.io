@@ -18,5 +18,5 @@
     "eject": "react-scripts eject",
     "deploy": "npm run build && gh-pages -d build"
   },
-  "homepage": "https://renata-s.github.io/udacity/neighborhood-map-app"
+  "homepage": "https://renata-s.github.io/udacity/neighborhood-map-app/site"
 }

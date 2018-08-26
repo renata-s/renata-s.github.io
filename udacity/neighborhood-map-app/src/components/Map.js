@@ -7,13 +7,12 @@ export default class Map extends React.PureComponent {
   state = {
     locations: [
       { title: 'Kaunas Castle', address: 'Pilies gatvė, Kaunas', highlight: false, location: { lat: 54.8989236, lng: 23.8854064 } },
-      { title: 'Žalgirio Arena', address: 'Karaliaus Mindaugo prospektas, Kaunas', highlight: false, location: { lat: 54.8904589, lng: 23.9145647 } },
+      { title: 'Zalgirio Arena', address: 'Karaliaus Mindaugo prospektas, Kaunas', highlight: false, location: { lat: 54.8904589, lng: 23.9145647 } },
       { title: 'Oak-wood Park', address: 'Radvilėnų plentas, Kaunas', highlight: false, location: { lat: 54.8995381, lng: 23.9457049 } },
       { title: 'KTU Technology Center', address: 'Studentų gatvė, Kaunas', highlight: false, location: { lat: 54.9049311, lng: 23.9566562 } },
-      { title: 'Flugplatz Aleksotas', address: 'Veiverių g., Kaunas', highlight: false, location: { lat: 54.8775545, lng: 23.8821133 } }
+      { title: 'Aleksotas Aerodrome', address: 'Veiverių g., Kaunas', highlight: false, location: { lat: 54.8775545, lng: 23.8821133 } }
     ],
     search: '',
-    markers: ''
   }
   handleValueChange = (e) => {
     this.setState({ search: e.target.value })
@@ -21,22 +20,20 @@ export default class Map extends React.PureComponent {
 
   handleClick = (loc) => {
     const items = this.state.locations.map(m => {
-      if (m.title == loc.title) {
-        console.log('found');
+      if (m.title === loc.title) {
         m.highlight = !m.highlight;
       }
 
       return m
     });
 
-    console.log(loc);
     this.setState({
       locations: items
     });
   }
   Toggle = (loc) => {
     const items = this.state.locations.map(m => {
-      if (m.title == loc.title) {
+      if (m.title === loc.title) {
         m.isOpen = !m.isOpen;
       }
       return m
@@ -55,23 +52,21 @@ export default class Map extends React.PureComponent {
       strokeColor: 'gold',
       strokeWeight: 1
     };
+    let markers = this.state.locations;
     if (this.state.search) {
-      this.state.markers = this.state.locations.filter(m => m.title.toLowerCase().includes(this.state.search.toLowerCase())).map(l => {
+      markers = this.state.locations.filter(m => m.title.toLowerCase().includes(this.state.search.toLowerCase())).map(l => {
         return l;
       });
-    } else {
-      this.state.markers = this.state.locations;
     }
     const that = this;
     return (
       <div className="container">
         <div className="sidebar" role="sidebar">
           <div className="text-input">
-            <input role="search" aria-label="Search For a Location"
-              tabIndex="0" /> type='text' onChange={this.handleValueChange} />
+            <input role="search" tabIndex="0" type='text' onChange={this.handleValueChange} />
             {
               <ul className="locations-list" aria-label="Location list" tabIndex="0">{
-                this.state.markers.map(function (m, i) {
+                markers.map(function (m, i) {
                   return (<li key={i}><a href='javascript:void(0)' onClick={that.handleClick.bind(that, m)}>{m.title}</a></li>)
                 })
               }
@@ -79,7 +74,7 @@ export default class Map extends React.PureComponent {
             }
           </div>
         </div>
-        <div className="map" role="map" aria-label="Neighborhood map">
+        <div className="map" /*role="map"*/ /*aria-label="Neighborhood map"*/>
           <GoogleMapsWrapper
             googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places&key=AIzaSyDfEhgi4c_HGJNjrKa4EMisx-l71acyiWY"
             loadingElement={<div style={{ height: `100%` }} />}
@@ -91,7 +86,7 @@ export default class Map extends React.PureComponent {
               averageCenter
               enableRetinaIcons
               gridSize={60}>
-              {this.state.markers.map(function (loc, i) {
+              {markers.map(function (loc, i) {
                 return (
                   <Marker icon={loc.highlight ? goldStar : undefined}
                     key={i}
