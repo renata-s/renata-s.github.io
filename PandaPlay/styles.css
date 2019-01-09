@@ -1,0 +1,161 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "PT Sans", sans-serif;
+}
+
+header,
+section,
+div {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.activities {
+  display: flex;
+  width: 1200px;
+  margin: auto;
+  padding: 70px 0px 70px 0;
+  min-height: 1px;
+
+}
+
+#card_foto {
+  border-bottom-left-radius: 10em 3em;
+  border-bottom-right-radius: 10em 3em;
+}
+
+#activities-item1 {
+  width: 33.33333333%;
+  background-color: #78be20;
+  margin-right: 30px;
+}
+
+#activities-item2 {
+  width: 33.33333333%;
+  background-color: #e0004d;
+  margin-right: 30px;
+}
+
+#activities-item3 {
+  width: 33.33333333%;
+  background-color: #00afd7;
+}
+
+.container {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+p {
+  font-family: "Damion";
+  font-size: 27px;
+  line-height: 30px;
+  letter-spacing: normal;
+  color: #ffffff;
+  padding-top:15px;
+  margin: 0;
+}
+
+h2 {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 35px;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 10px 0 30px 0;
+}
+
+.button {
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #374244;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 10px 30px;  
+  border-radius: 30px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 9em;
+  background-color: #242a34;
+  opacity: 90%;
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif;
+  
+}
+
+.header__logo {
+  width: auto;
+  height: auto;
+  margin-left: 20em;
+  margin-top: 25px;
+  max-height: 100px;
+
+}
+
+.header_menu {
+  display: inline-block;
+  text-align: right;
+  margin-top: 30px;
+  width: 60%;
+  
+  
+ }
+
+.icon_facbook {
+  max-height: 15px;
+  width: auto;
+  height: auto;
+  margin: 0 25px;
+  padding: 0;
+  }
+
+.social_caption {
+  color: white;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+   }
+
+.nav_bar {
+  color: white;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "PT Sans Narrow", sans-serif;
+  line-height: 18px;
+  letter-spacing: normal;
+  
+  }
+
+.items {
+  list-style: none;
+  display: inline-flex;
+  text-align: center;
+
+}
+
+.foto_tituline {
+  width: 100%;
+}
