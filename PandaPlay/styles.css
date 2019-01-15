@@ -23,7 +23,8 @@ div {
   flex-wrap: wrap;
 }
 
-.activities {
+.activities,
+.main-inner {
   display: flex;
   width: 1200px;
   margin: auto;
@@ -158,4 +159,121 @@ header {
 
 .foto_tituline {
   width: 100%;
+}
+
+.birthday {
+  width: 50%;
+  margin-right: 30px;
+}
+
+.advantage,
+.slides-img {
+  width: 25%;
+}
+
+h4 {
+  color: #78be20;
+  text-transform: uppercase;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+h1 {
+  color: #374244;
+  text-transform: uppercase;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 40px;
+  line-height: 55px;
+  word-wrap: break-word;
+}
+
+#description {
+  color: #757c7e;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: start;  
+  margin-bottom: 50px;
+  width: 440px;
+}
+
+#btn {
+  text-decoration: none;
+  background-color: #e0004d;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 10px 30px;  
+  border-radius: 30px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+}
+
+.advantage li {
+  line-height: 30px;
+  font-family: "PT Sans", sans-serif;
+  color: #444444;
+}
+
+ul {
+  padding: 0;
+}
+
+ul.checkmark li {
+  font-size: 15px;
+  list-style-type: none;
+  padding: 0 0 0 2.5em;
+  position: relative;
+  margin: 0 0 10px 0;
+}
+
+ul.checkmark li:before {
+  content: " ";
+  display: block;
+  border: solid 0.8em #e0004d;
+  border-radius: .8em;
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: 0;
+  top: 40%;
+  margin-top: -0.5em;
+}
+
+ul.checkmark li:after {
+  content: " ";
+  display: block;
+  width: 0.3em;
+  height: 0.6em;
+  border: solid white;
+  border-width: 0 0.2em 0.2em 0;
+  position: absolute;
+  left: 0.5em;
+  top: 40%;
+  margin-top: -0.2em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.color-block {
+  width: 100%;
+  height: 700px;
+  background-color: #00afd7;
+  margin-bottom: 50px;
+}
+
+#block-title  {
+ font-weight: bolder;
+  text-align: center;
+}
+
+.color-block img{
+  max-width: 40%;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
 }
