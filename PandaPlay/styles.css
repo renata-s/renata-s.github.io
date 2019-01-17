@@ -277,3 +277,64 @@ ul.checkmark li:after {
   margin-right: auto;
   display: block;
 }
+
+.contact-info {
+  width: 1200px;
+  margin: auto;
+  display: inline-flex;
+}
+
+.form-control {
+  padding: 0 1.5em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d0d1d0;
+  box-sizing: border-box;
+  height: 3em;
+  line-height: 1.1;
+  margin-bottom: 1.2em;
+  width: 100%;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+ 
+  }
+
+ form .submit {
+  background-color: #e0004d;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 10px 30px;  
+  border-radius: 30px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+  width: 35%;
+  }
+
+  form .message {
+    padding-top: 10px;
+    height: 6em;
+  }
+
+  form .text,
+  form .email {
+    width: 47%;
+    float: left;
+  }
+  form .text {
+    margin-right: 20px;
+  }
+
+
+  .contact-form {
+    margin-right: 80px;
+  }
+
+   #contact-title {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: 900;
+    color: #374244;
+  }
