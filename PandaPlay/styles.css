@@ -328,7 +328,9 @@ ul.checkmark li:after {
 
 
   .contact-form {
+    padding-top: 0;
     margin-right: 80px;
+    background-color: #f6f5f2;
   }
 
    #contact-title {
@@ -337,4 +339,80 @@ ul.checkmark li:after {
     line-height: 55px;
     font-weight: 900;
     color: #374244;
+  }
+
+  .adress {
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    color: #374244;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    padding-top: 80px;
+    padding-left: 30px;
+  }
+
+  h5,
+  #street,
+  #email,
+  #phone {
+    color: #757c7e;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    text-transform: initial;
+    padding: 0;
+    margin: 0;
+  }
+
+  #phone {
+    color: #78be20;
+  }
+
+  #email {
+    text-decoration: underline;
+  }
+
+  #street,
+  #email,
+  #phone {
+    padding-bottom: 20px;
+  }
+
+  .map {
+    padding-top: 30px;
+  }
+
+  .friends-logo {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 20%;
+    max-height: 20%;
+
+  }
+
+  .friends {
+  width: 1200px;
+  margin: auto;
+  display: inline-flex;
+  }
+
+  .friends-name {
+    width: 30%;
+  } 
+
+  h3 {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 30px;
+    line-height: 55px;
+    text-transform: uppercase;
+    color: #374244;
+  }
+
+  img.img1,
+  img.img2,
+  img.img3 {
+    display: flex;
+    justify-content: space-evenly;
+    
   }
