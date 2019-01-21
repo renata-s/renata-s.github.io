@@ -355,7 +355,8 @@ ul.checkmark li:after {
   h5,
   #street,
   #email,
-  #phone {
+  #phone,
+  .copyright-text {
     color: #757c7e;
     font-family: "PT Sans", sans-serif;
     font-size: 16px;
@@ -383,22 +384,28 @@ ul.checkmark li:after {
   }
 
   .friends-logo {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 20%;
-    max-height: 20%;
-
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
   }
+
+#img1,
+#img2,
+#img3{
+  width: auto;
+  padding: 30px;
+}
 
   .friends {
   width: 1200px;
   margin: auto;
-  display: inline-flex;
+  display: flex;
+
+
   }
 
   .friends-name {
-    width: 30%;
+    width: 25%;
   } 
 
   h3 {
@@ -409,10 +416,65 @@ ul.checkmark li:after {
     color: #374244;
   }
 
-  img.img1,
-  img.img2,
-  img.img3 {
-    display: flex;
-    justify-content: space-evenly;
-    
+  .footer-inner {
+    background-image: url("img/bg_footer.jpg");
+    height: 500px;
+    margin-top: 50px;
   }
+
+
+  .footer-logo {
+    padding-top: 60px;
+  }
+
+  .footer-logo img {
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: auto;   
+   }
+
+   .contact-footer {
+     display: inline-flex;
+    
+      padding-top: 50px;
+   }
+
+.adress-footer {
+  text-align: right;
+  margin-right: 25px;
+}
+
+.phone-footer {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.facbook-logo img {
+   width: 3em;
+   height: 3em;
+   line-height: 3em;
+}
+
+.copyright {
+  background-color: rgba(36,42,52,0.9);
+  text-align: center;
+  height: 50px;
+  padding-top: 10px;
+}
+
+#phone2 {
+  color: #78be20;
+  font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    text-transform: initial;
+    padding: 0;
+    margin: 0;
+}
+
+.facbook-logo {
+  text-align: center;
+  padding-top: 50px;
+}
