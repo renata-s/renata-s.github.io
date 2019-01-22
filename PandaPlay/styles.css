@@ -7,6 +7,12 @@ html {
   font-family: "PT Sans", sans-serif;
 }
 
+body {
+  background: url("img/foto_tituline.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
 header,
 section,
 div {
@@ -21,6 +27,68 @@ div {
 .content {
   display: flex;
   flex-wrap: wrap;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 9em;
+  background-color: rgba(36,42,52,0.9);
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif; 
+}
+
+.header__logo {
+  width: auto;
+  height: auto;
+  margin-left: 20em;
+  margin-top: 25px;
+  max-height: 100px;
+
+}
+
+.header_menu {
+  display: inline-block;
+  text-align: right;
+  margin-top: 30px;
+  width: 60%;
+  
+  
+ }
+
+.icon_facbook {
+  max-height: 15px;
+  width: auto;
+  height: auto;
+  margin: 0 25px;
+  padding: 0;
+  }
+
+.social_caption {
+  color: white;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+   }
+
+.nav_bar {
+  color: white;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "PT Sans Narrow", sans-serif;
+  line-height: 18px;
+  letter-spacing: normal;
+  
+  }
+
+.items {
+  list-style: none;
+  display: inline-flex;
+  text-align: center;
+
 }
 
 .activities,
@@ -93,73 +161,8 @@ h2 {
   font-weight: 600;
 }
 
-header {
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
-  height: 9em;
-  background-color: #242a34;
-  opacity: 90%;
-  margin: 0;
-  padding: 0;
-  font-family: "PT Sans", sans-serif;
-  
-}
 
-.header__logo {
-  width: auto;
-  height: auto;
-  margin-left: 20em;
-  margin-top: 25px;
-  max-height: 100px;
 
-}
-
-.header_menu {
-  display: inline-block;
-  text-align: right;
-  margin-top: 30px;
-  width: 60%;
-  
-  
- }
-
-.icon_facbook {
-  max-height: 15px;
-  width: auto;
-  height: auto;
-  margin: 0 25px;
-  padding: 0;
-  }
-
-.social_caption {
-  color: white;
-  font-size: 16px;
-  margin: 0;
-  padding: 0;
-   }
-
-.nav_bar {
-  color: white;
-  margin-top: 15px;
-  text-transform: uppercase;
-  font-size: 18px;
-  font-family: "PT Sans Narrow", sans-serif;
-  line-height: 18px;
-  letter-spacing: normal;
-  
-  }
-
-.items {
-  list-style: none;
-  display: inline-flex;
-  text-align: center;
-
-}
-
-.foto_tituline {
-  width: 100%;
-}
 
 .birthday {
   width: 50%;
@@ -477,4 +480,14 @@ ul.checkmark li:after {
 .facbook-logo {
   text-align: center;
   padding-top: 50px;
+}
+
+#call {
+  width: 0.8em;
+}
+
+
+#phone2,
+#call {
+display: inline;
 }
