@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Mano pirmasis puslapis</title>
+    <link rel="stylesheet" href="main.css" />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="#headers">Antraštės</a>
+      <a href="#table">Lentelė</a>
+      <a href="#images">Nuotraukos</a>
+      <a href="#lists">Sąrašas</a>
+      <a href="#display">Atvaizdavimo tipai</a>
+      <a href="#forms">Formos</a>
+    </div>
+
+    <h3 id="headers">Headers</h3>
+
+    <h3 id="table">Table</h3>
+
+    <h3 id="images">Images</h3>
+
+    <h5>Nuotrauka iš interneto</h5>
+    <img
+      src="https://wallpaperbrowse.com/media/images/3848765-wallpaper-images-download.jpg"
+      alt="Foto"
+      width="600px"
+    />
+
+    <h5>Nuotrauka iš failų sistemos</h5>
+    <img src="img/tigras.jpg" alt="Tigras" height="600px" />
+
+    <h5>Nuotrauka iš failų sistemos</h5>
+    <img src="img/tigras.jpg" alt="Tigras" width="600px" height="600px" />
+    <hr />
+    <h3 id="lists">Lists</h3>
+    <ul>
+      <li>Apple</li>
+      <li>Pear</li>
+      <li>Banana</li>
+      <li>Kiwi</li>
+      <li>Grapes</li>
+    </ul>
+
+    <h5>Sorted Lists</h5>
+    <ol>
+      <li>Performance</li>
+      <li>Security</li>
+      <li>Spreadability</li>
+      <li>Maintence</li>
+      <li>Price</li>
+    </ol>
+    <h3 id="display">Display tipai</h3>
+    <h5>Div's - block</h5>
+    <div class="bg-blue d-block">div</div>
+    <div class="bg-blue d-block">div</div>
+    <div class="bg-blue d-block">div</div>
+
+    <h5>Span's - inline</h5>
+    <span class="bg-red">span</span>
+    <span class="bg-red">span</span>
+    <span class="bg-red">span</span>
+    <span class="bg-red">span</span>
+    <span class="bg-red">span</span>
+    <span class="bg-red">span</span>
+
+    <h5>Span's - inline-block></h5>
+    <span class="bg-green d-inline-block">span</span>
+    <span class="bg-green d-inline-block">span</span>
+    <span class="bg-green d-inline-block">span</span>
+    <span class="bg-green d-inline-block">span</span>
+    <span class="bg-green d-inline-block">span</span>
+    <span class="bg-green d-inline-block">span</span>
+    <hr />
+    <h3 id="forms">Forms</h3>
+
+    <form id="form-register">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" />
+      </div>
+
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" />
+      </div>
+
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" />
+      </div>
+      <div class="form-group">
+        <label for="rep-password">Repeat Password</label>
+        <input type="rep-password" id="rep-password" />
+      </div>
+
+      <input type="submit" value="Registruotis" />
+    </form>
+  </body>
+</html>
