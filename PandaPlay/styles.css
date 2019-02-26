@@ -1,0 +1,559 @@
+body,
+html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  font-family: "PT Sans", sans-serif;
+}
+
+body {
+  background: url("img/foto_tituline.jpg"); 
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+header,
+section,
+div {
+  box-sizing: border-box;
+}
+
+* {
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.content {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 9em;
+  background-color: rgba(36,42,52,0.9);
+  margin: 0;
+  padding: 0;
+  font-family: "PT Sans", sans-serif; 
+}
+
+.header__logo {
+  width: auto;
+  height: auto;
+  margin-left: 20em;
+  margin-top: 25px;
+  max-height: 100px;
+
+}
+
+.header_menu {
+  display: inline-block;
+  text-align: right;
+  margin-top: 30px;
+  width: 60%;
+  
+  
+ }
+
+.icon_facbook {
+  max-height: 15px;
+  width: auto;
+  height: auto;
+  margin: 0 25px;
+  padding: 0;
+  }
+
+.social_caption {
+  color: white;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+   }
+
+.nav_bar {
+  color: white;
+  margin-top: 15px;
+  text-transform: uppercase;
+  font-size: 18px;
+  font-family: "PT Sans Narrow", sans-serif;
+  line-height: 18px;
+  letter-spacing: normal;
+  
+  }
+
+#panda {
+font-size: 40px;
+text-align: center;
+margin: 30px;
+padding: 0;
+}
+
+#header-title {
+  text-align: center;
+  margin: 0;
+  color: #ffffff;
+  font-size: 100px;
+}
+
+.main-header {
+  margin-top: 200px;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.button1 {
+  text-decoration: none;
+  background-color: #e0004d;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 25px;
+  text-transform: uppercase;
+  padding: 20px 50px;  
+  border-radius: 30px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+  align-items: center;
+  letter-spacing: normal;
+  margin-top: 80px;
+}
+
+.main-text {
+  margin-bottom: 150px;
+}
+
+#call-info {
+  margin-top: 50px;
+  font-family: "PT Sans", sans-serif;
+  color: #d5e008;
+  font-weight: 750;
+  font-size: 25px;
+}
+
+.items {
+  list-style: none;
+  display: inline-flex;
+  text-align: center;
+
+}
+
+.activities,
+.main-inner {
+  display: flex;
+  width: 1200px;
+  margin: auto;
+  padding: 70px 0px 70px 0;
+  min-height: 1px;
+
+}
+
+#card_foto {
+  border-bottom-left-radius: 10em 3em;
+  border-bottom-right-radius: 10em 3em;
+}
+
+#activities-item1 {
+  width: 33.33333333%;
+  background-color: #78be20;
+  margin-right: 30px;
+}
+
+#activities-item2 {
+  width: 33.33333333%;
+  background-color: #e0004d;
+  margin-right: 30px;
+}
+
+#activities-item3 {
+  width: 33.33333333%;
+  background-color: #00afd7;
+}
+
+.container {
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+p {
+  font-family: "Damion";
+  font-size: 27px;
+  line-height: 30px;
+  letter-spacing: normal;
+  color: #ffffff;
+  padding-top:15px;
+  margin: 0;
+}
+
+h2 {
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 35px;
+  line-height: 24px;
+  letter-spacing: normal;
+  color: #ffffff;
+  text-transform: uppercase;
+  margin: 10px 0 30px 0;
+}
+
+.button {
+  text-decoration: none;
+  background-color: #ffffff;
+  color: #374244;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 10px 30px;  
+  border-radius: 30px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+}
+
+.birthday {
+  width: 50%;
+  margin-right: 30px;
+}
+
+.advantage,
+.slides-img {
+  width: 25%;
+}
+
+h4 {
+  color: #78be20;
+  text-transform: uppercase;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 17px;
+  line-height: 24px;
+}
+
+h1 {
+  color: #374244;
+  text-transform: uppercase;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-size: 40px;
+  line-height: 55px;
+  word-wrap: break-word;
+}
+
+#description {
+  color: #757c7e;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  text-align: start;  
+  margin-bottom: 50px;
+  width: 440px;
+}
+
+#btn {
+  text-decoration: none;
+  background-color: #e0004d;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 10px 30px;  
+  border-radius: 30px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+}
+
+.advantage li {
+  line-height: 30px;
+  font-family: "PT Sans", sans-serif;
+  color: #444444;
+}
+
+ul {
+  padding: 0;
+}
+
+ul.checkmark li {
+  font-size: 15px;
+  list-style-type: none;
+  padding: 0 0 0 2.5em;
+  position: relative;
+  margin: 0 0 10px 0;
+}
+
+ul.checkmark li:before {
+  content: " ";
+  display: block;
+  border: solid 0.8em #e0004d;
+  border-radius: .8em;
+  height: 0;
+  width: 0;
+  position: absolute;
+  left: 0;
+  top: 40%;
+  margin-top: -0.5em;
+}
+
+ul.checkmark li:after {
+  content: " ";
+  display: block;
+  width: 0.3em;
+  height: 0.6em;
+  border: solid white;
+  border-width: 0 0.2em 0.2em 0;
+  position: absolute;
+  left: 0.5em;
+  top: 40%;
+  margin-top: -0.2em;
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -o-transform: rotate(45deg);
+  transform: rotate(45deg);
+}
+
+.color-block {
+  width: 100%;
+  height: 700px;
+  background-color: #00afd7;
+  margin-bottom: 50px;
+}
+
+#block-title  {
+ font-weight: bolder;
+  text-align: center;
+}
+
+/* SLIDER */
+#slider {position:relative; width:80%; height:80%; margin:0 auto; 
+  background-color:#00afd7; overflow:hidden;}
+#slider .slide {width:100%; height:100%; text-align:center;}
+#slider .slide img {width:auto; height:auto; border: solid 10px white;}
+
+
+/* ARROWS */
+#slider a {
+	display: block;
+  position: absolute;
+  background-color: #ffffff;
+	top: 40%;
+	-webkit-transform: translateY(-50%);
+	transform: translateY(-50%);
+	width: auto;
+  padding: 10px 18px;
+	text-decoration: none;
+  font-size: 18px;
+  color: #757c7e;
+	cursor: pointer;
+	z-index: 1;
+	transition: background-color 0.6s ease;
+}
+#slider a:hover {color:#78be20;}
+#slider a.prev {left:0; border-radius: 100%;}
+#slider a.next {right:0; border-radius: 100%;}
+
+.contact-info {
+  width: 1200px;
+  margin: auto;
+  display: inline-flex;
+}
+
+.form-control {
+  padding: 0 1.5em;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #d0d1d0;
+  box-sizing: border-box;
+  height: 3em;
+  line-height: 1.1;
+  margin-bottom: 1.2em;
+  width: 100%;
+  font-family: "PT Sans", sans-serif;
+  font-size: 16px;
+ 
+  }
+
+ form .submit {
+  background-color: #e0004d;
+  color: #ffffff;
+  font-size: 15px;
+  line-height: 20px;
+  text-transform: uppercase;
+  padding: 10px 30px;  
+  border-radius: 30px;
+  font-family: "PT Sans Narrow", sans-serif;
+  font-weight: 600;
+  width: 35%;
+  }
+
+  form .message {
+    padding-top: 10px;
+    height: 6em;
+  }
+
+  form .text,
+  form .email {
+    width: 47%;
+    float: left;
+  }
+  form .text {
+    margin-right: 20px;
+  }
+
+
+  .contact-form {
+    padding-top: 0;
+    margin-right: 80px;
+    background-color: #f6f5f2;
+  }
+
+   #contact-title {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 50px;
+    line-height: 55px;
+    font-weight: 900;
+    color: #374244;
+  }
+
+  .adress {
+    font-family: "PT Sans", sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    color: #374244;
+    text-transform: uppercase;
+    letter-spacing: normal;
+    padding-top: 80px;
+    padding-left: 30px;
+  }
+
+  h5,
+  #street,
+  #email,
+  #phone,
+  .copyright-text {
+    color: #757c7e;
+    font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    text-transform: initial;
+    padding: 0;
+    margin: 0;
+  }
+
+  #phone {
+    color: #78be20;
+  }
+
+  #email {
+    text-decoration: underline;
+  }
+
+  #street,
+  #email,
+  #phone {
+    padding-bottom: 20px;
+  }
+
+  .map {
+    padding-top: 30px;
+  }
+
+  .friends-logo {
+    display: inline-flex;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+#img1,
+#img2,
+#img3{
+  width: auto;
+  padding: 30px;
+}
+
+  .friends {
+  width: 1200px;
+  margin: auto;
+  display: flex;
+
+
+  }
+
+  .friends-name {
+    width: 25%;
+  } 
+
+  h3 {
+    font-family: "PT Sans Narrow", sans-serif;
+    font-size: 30px;
+    line-height: 55px;
+    text-transform: uppercase;
+    color: #374244;
+  }
+
+  .footer-inner {
+    background-image: url("img/bg_footer.jpg");
+    height: 500px;
+    margin-top: 50px;
+  }
+
+
+  .footer-logo {
+    padding-top: 60px;
+  }
+
+  .footer-logo img {
+    height: 150px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    width: auto;   
+   }
+
+   .contact-footer {
+     display: inline-flex;
+    
+      padding-top: 50px;
+   }
+
+.adress-footer {
+  text-align: right;
+  margin-right: 25px;
+}
+
+.phone-footer {
+  text-align: left;
+  margin: 0;
+  padding: 0;
+}
+
+.facbook-logo img {
+   width: 3em;
+   height: 3em;
+   line-height: 3em;
+}
+
+.copyright {
+  background-color: rgba(36,42,52,0.9);
+  text-align: center;
+  height: 50px;
+  padding-top: 10px;
+}
+
+#phone2 {
+  color: #78be20;
+  font-family: "PT Sans", sans-serif;
+    font-size: 16px;
+    text-transform: initial;
+    padding: 0;
+    margin: 0;
+}
+
+.facbook-logo {
+  text-align: center;
+  padding-top: 50px;
+}
+
+#call {
+  width: 0.8em;
+}
+
+
+#phone2,
+#call {
+display: inline;
+}
