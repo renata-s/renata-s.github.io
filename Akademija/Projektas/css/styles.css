@@ -1,0 +1,197 @@
+body {
+    margin: 0;    
+}
+
+.section{
+    border-style: double;
+    width: 1140px;
+    height: 100%;
+    display: block;
+    margin: 0 auto;
+}
+
+
+.phone{
+    color: rgba(255,255,255,.5);
+    font-size: 20px;
+}
+
+.navbar-brand {
+    margin: 0;
+}
+
+  .header {
+    height: 158px;
+    padding: 0;
+}
+
+.header-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.header-bottom {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 0;
+    margin: 0
+}
+
+.header-text {
+    font-family: 'Cabin Sketch', cursive;
+    font-size: 70px;
+    text-transform: uppercase;
+    margin: 20px 10px 0;
+}
+
+.header-description {
+    font-family: 'Nanum Brush Script', cursive;
+    font-size: 50px;
+    margin: 0;
+    color: orange;
+    }
+
+.pizza-icon {
+    font-size: 70px;
+    margin: 0 10px;
+    color: orange;
+}
+
+.main-content{
+    margin-top: 20px;
+}
+
+.main-content-left {
+    float: left;
+    height: 210px;
+    width: 35%;
+}
+
+.content-header{
+    font-family: 'Graduate', cursive;
+}
+
+.content-text{
+    font-family: 'Balthazar', serif;
+    font-size: 20px;
+}
+
+.carousel-img {
+    height: 500px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel-img-1 {
+    background-image: url(./img/pizza1.jpg)
+}
+
+.carousel-img-2 {
+    background-image: url(./img/pizza2.jpg)
+}
+
+.carousel-img-3 {
+    background-image: url(./img/pizza3.jpg)
+}
+
+.carousel-img-4 {
+    background-image: url(./img/pizza4.jpg)
+}
+
+
+.pizza-img {
+    margin-left: 30px;
+    border: 1px dashed pink;
+    height: 200px;
+    width: 350px;
+    background-repeat: no-repeat;
+}
+
+.foto1 {
+    background-image: url(./img/pizza1.jpg);
+    background-size: cover;
+}
+
+.foto2{
+    background-image: url(./img/pizza2.jpeg);
+    background-size: cover;
+}
+
+.foto3{
+    background-image: url(./img/pizza3.jpg);
+    background-size: cover;
+}
+
+.foto4{
+    background-image: url(./img/pizza4.jpg);
+    background-size: cover;
+}
+
+.main-content-right {
+    float: right;
+    height: 200px;
+    width: 60%;
+    padding-right: 30px;
+}
+
+.btn {
+    font-size: 1em;
+    text-transform: uppercase;
+}
+
+.clear-fix{
+    clear: both;
+
+}
+
+hr.break-line{
+    overflow: visible; 
+    width: 95%;
+    padding: 0;
+    border: none;
+    border-top: medium double #333;
+    color: #333;
+    text-align: center;
+}
+hr.break-line:last-of-type{
+    visibility: hidden;
+}
+
+hr.break-line:after:not(:last-of-type) {
+    content: "§";
+    display: inline-block;
+    position: relative;
+    top: -0.7em;
+    font-size: 1.5em;
+    padding: 0 0.25em;
+    background: white;
+}
+
+.contact-container{
+    height: 330px;
+    width: 550px;
+}
+
+.contact-icon{
+    width: 25px;
+    height: 25px;
+    margin-left: 20px;
+    margin-right: 20px;
+    color: orange;
+}
+
+.contact-line{
+    color: rgba(255,255,255,.5);
+}
+
+.h3 {
+    font-family: 'Graduate', cursive;
+    font-size: 35px;
+    margin: 0;
+    color: rgba(255,255,255,.5);    
+    }
+
+
